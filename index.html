@@ -360,10 +360,6 @@
             transition: all 0.3s ease;
             
           }
-
-
-
-
           .sound-Btns button:hover {
             /* background:#f7c9fb; */
             color: white;
@@ -371,6 +367,7 @@
             box-shadow: 0 0 20px rgba(234, 126, 244, 0.6); /* 빛나는 효과 */
           
           }
+
 
             /* 재생 중인 버튼 표시 */
               .sound-Btns button.playing {
@@ -509,7 +506,130 @@
             color: #999;
         }
 
+/* 모바일 휴대폰 */
+   @media screen and (max-width: 768px) {
 
+  .sound-Btns {
+    gap: 30px; /* 버튼 간격 줄이기 */
+  }
+
+  .sound-Btns button {
+    width: 20vw;   /* 화면 너비의 20% → 반응형 원 크기 */
+    height: 20vw;
+    max-width: 100px;  /* 너무 커지지 않게 최대치 제한 */
+    max-height: 100px;
+    font-size: 24px;   /* 아이콘 크기도 맞게 조정 */
+    
+  }
+
+    .sound-Btns button:first-child {
+    position: relative;
+    z-index: 9999;           /* 항상 최상단 */
+    
+  }
+
+      .sound-Btns button:first-child i {
+        pointer-events: none !important; /* 아이콘이 클릭 막지 않게 */
+      }
+
+
+  /* 갤러리 - 비율 유지 */
+  .gallery-grid img {
+    height: auto;         /* 세로 강제값 해제 */
+    object-fit: contain;  /* 비율 유지 */
+  }
+
+  /* 슬라이더 이미지 중앙 정렬 */
+  .slider {
+    height: 300px;        /* 모바일에서만 줄이기 */
+  }
+  .slides img {
+    width: 100%;
+    height: auto;
+    transform: translateX(-50%); /* 중앙 유지 */
+  }
+
+  /*  오버레이 텍스트 - 글자 크기만 축소 */
+  .overlay-text h1 {
+    font-size: 28px;
+  }
+  .overlay-text p {
+    font-size: 16px;
+  }
+
+  /* Experience / Message - 글자 크기만 축소 */
+  #experience h1 {
+    font-size: 28px;
+  }
+  #experience p {
+    font-size: 16px;
+  }
+
+  #message h1 {
+    font-size: 36px;
+  }
+  #message p {
+    font-size: 16px;
+  }
+
+   nav {
+    height: 50px; /* 원래보다 조금 낮게 */
+    
+  }
+
+  .menu ul {
+    gap: 20px; /* 메뉴 간격 줄이기 */
+  }
+
+  .menu a {
+    font-size: 14px; /* 글자 크기 축소 */
+  }
+
+  #logo {
+  transform: scale(0.7); /* 크기 축소 */
+  margin-top: -130px;      /* 로고만 살짝 위로 올림 */
+  }
+
+  /* 푸터 */
+  footer {
+    padding: 20px 30px; /* 여백 줄이기 */
+  }
+
+  .footer-left .footer-title {
+    font-size: 16px; /* 제목 줄이기 */
+  }
+
+  .footer-left .footer-msg,
+  .footer-right .footer-contact {
+    font-size: 13px; /* 본문 줄이기 */
+  }
+
+  .footer-right .footer-copy {
+    font-size: 11px; /* 카피라이트 더 작게 */
+  }
+
+   .popup-content {
+    width: 90%;         /* 화면의 90% 폭 */
+    max-width: 400px;   /* 너무 커지지 않게 제한 */
+    padding: 15px;      /* 안쪽 여백 줄이기 */
+    font-size: 14px;    /* 글씨 크기 축소 */
+  }
+
+  .popup-content h2 {
+    font-size: 18px;
+  }
+
+  .popup-content p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .popup-close {
+    top: 8px;
+    right: 10px;
+    font-size: 20px;
+  }
+}
 
 
             
